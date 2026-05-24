@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pallabi Biswas | Portfolio</title>
+
+  <style>
+    :root{
+      --bg:#000000;
+      --bg2:#0d1117;
+      --border:#30363d;
+      --text:#e6edf3;
+      --muted:#8b949e;
+      --link:#58a6ff;
+      --card:#111827;
+      --green:#2ea043;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Segoe UI, sans-serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    a{
+      text-decoration:none;
+      color:var(--link);
+    }
+
+    header{
+      background:#010409;
+      border-bottom:1px solid var(--border);
+      padding:18px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    .container{
+      max-width:1300px;
+      margin:auto;
+      padding:30px;
+      display:flex;
+      gap:40px;
+    }
+
+    .sidebar{
+      width:300px;
+    }
+
+    .avatar{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid var(--border);
+      margin-bottom:20px;
+    }
+
+    .name{
+      font-size:30px;
+      font-weight:700;
+    }
+
+    .username{
+      color:var(--muted);
+      font-size:20px;
+      margin-bottom:15px;
+    }
+
+    .bio{
+      line-height:1.6;
+      margin-bottom:20px;
+      color:#d0d7de;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      text-align:center;
+      background:#21262d;
+      border:1px solid var(--border);
+      padding:10px;
+      border-radius:8px;
+      color:white;
+      margin-bottom:20px;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#30363d;
+    }
+
+    .info{
+      list-style:none;
+      margin-bottom:25px;
+    }
+
+    .info li{
+      margin:12px 0;
+      color:#c9d1d9;
+      word-break:break-word;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .skill{
+      padding:6px 14px;
+      border:1px solid var(--border);
+      border-radius:30px;
+      font-size:13px;
+      color:#c9d1d9;
+      background:#161b22;
+    }
+
+    .content{
+      flex:1;
+    }
+
+    .section-title{
+      font-size:25px;
+      margin-bottom:20px;
+    }
+
+    .repo-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:20px;
+    }
+
+    .repo-card{
+      background:var(--bg2);
+      border:1px solid var(--border);
+      border-radius:12px;
+      overflow:hidden;
+      transition:.3s;
+    }
+
+    .repo-card:hover{
+      transform:translateY(-5px);
+      border-color:#58a6ff;
+    }
+
+    .repo-card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .repo-body{
+      padding:20px;
+    }
+
+    .repo-title{
+      font-size:20px;
+      font-weight:600;
+      margin-bottom:10px;
+    }
+
+    .repo-desc{
+      color:var(--muted);
+      line-height:1.6;
+      margin-bottom:15px;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:15px;
+    }
+
+    .tag{
+      background:rgba(88,166,255,.15);
+      color:#58a6ff;
+      padding:5px 12px;
+      border-radius:20px;
+      font-size:12px;
+    }
+
+    .repo-links{
+      display:flex;
+      gap:15px;
+    }
+
+    .repo-btn{
+      background:var(--green);
+      padding:8px 16px;
+      border-radius:8px;
+      color:white;
+      font-size:14px;
+    }
+
+    .repo-btn:hover{
+      opacity:.9;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      margin-top:50px;
+    }
+
+    @media(max-width:900px){
+      .container{
+        flex-direction:column;
+      }
+
+      .sidebar{
+        width:100%;
+      }
+
+      .avatar{
+        width:180px;
+        height:180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Pallabi Biswas</div>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Replace image link later -->
+    <img src="https://lh3.googleusercontent.com/d/1_zpp-Lebbsu6oUJnLqN1S_m-SRGjYcLz" class="avatar"/>
+
+    <div class="name">Pallabi Biswas</div>
+    <div class="username" >@Palla04</div>
+
+    <div class="bio">
+      Computer Science undergraduate passionate about software development and data analytics, with a strong interest in building innovative solutions and solving real-world problems. Enthusiastic about creating impactful projects, exploring new technologies, and continuously improving through learning and hands-on experience. A quick learner with strong analytical thinking, teamwork, communication, and problem-solving abilities, eager to contribute to dynamic and growth-oriented environments.
+    </div>
+
+    <a href="mailto:pallabibiswas4002@gmail.com" class="btn">
+      Contact Me
+    </a>
+
+    <ul class="info">
+      <li>📍 Burdwan, West Bengal</li>
+
+      <li>
+        📧
+        <a href="mailto:pallabibiswas4002@gmail.com">
+          pallabibiswas4002@gmail.com
+        </a>
+      </li>
+
+      <li>
+        💼
+        <a href="https://www.linkedin.com/in/pallabi-biswas-26151a255/" target="_blank">
+          LinkedIn
+        </a>
+      </li>
+
+      <li>
+        🌐
+        <a href="https://palla04.github.io/Portfolio/" target="_blank">
+          Portfolio
+        </a>
+      </li>
+
+      <li>
+        💻
+        <a href="https://github.com/Palla04" target="_blank">
+          GitHub
+        </a>
+      </li>
+    </ul>
+
+    <h2 style="margin-bottom:15px;">Skills</h2>
+
+    <div class="skills">
+      <span class="skill">C</span>
+      <span class="skill">OOPs in java</span>
+      <span class="skill">Python</span>
+      <span class="skill">Data Structure</span>
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">MongoDB</span>
+      <span class="skill">MySQL</span>
+      <span class="skill">Power BI</span>
+      <span class="skill">Excel</span>
+      <span class="skill">TensorFlow</span>
+      <span class="skill">Pandas</span>
+      <span class="skill">Git</span>
+      <span class="skill">GitHub</span>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <h1 class="section-title">Projects</h1>
+
+    <div class="repo-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="repo-card">
+
+        <img src="https://lh3.googleusercontent.com/d/1l2XmG48mRboYpogbymqSW3t3SV8W3Hua" />
+
+        <div class="repo-body">
+
+          <div class="repo-title">
+            FreshCart
+          </div>
+
+          <div class="repo-desc">
+            It's a responsive Grocery Delivery Web Application using React.js for component-based
+            architecture and Tailwind CSS for efficient, modern UI styling. Implemented reusable components,
+            optimized layouts for mobile and desktop screens, and integrated interactive features such as
+            product listings, category filters, and dynamic routing. Ensured a seamless user experience through
+            responsive design and state management for navigation and authentication workflows.
+          </div>
+
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+
+          <div class="repo-links">
+            <a href="https://github.com/Palla04/Grocery-App" class="repo-btn">GitHub</a>
+            <a href="https://quickfreshcart.netlify.app/" class="repo-btn">Live Demo</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="repo-card">
+
+        <img src="https://lh3.googleusercontent.com/d/1a0Iu45_bAC_SVKrvFVxKSM5VwoD0Grea" />
+
+        <div class="repo-body">
+
+          <div class="repo-title">
+            Indian Engineering College Placement Data Analysis
+          </div>
+
+          <div class="repo-desc">
+            This project focuses on analyzing placement data of engineering students across various branches in India. The goal is to uncover insights about placement trends, salary distribution, and the impact of academic and skill-based factors such as CGPA, internships, projects, and coding skills.
+            The project uses data analysis and visualization techniques to help understand what factors significantly influence student placements.
+          </div>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Data Studio</span>
+          </div>
+
+          <div class="repo-links">
+            <a href="https://github.com/Palla04/Indian-Engineering-College-Placement-Data-Analysis" class="repo-btn">GitHub</a>
+            <a href="https://www.linkedin.com/pulse/indian-engineering-college-placement-data-analysis-pallabi-biswas-sgt9c/" class="repo-btn">Details</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="repo-card">
+
+        <img src="https://lh3.googleusercontent.com/d/1T01y4MRpRzBN3n3rpV83IOHt5S2VR6nx" />
+
+        <div class="repo-body">
+
+          <div class="repo-title">
+            Blinkit Sales & Inventory Analysis Dashboard
+          </div>
+
+          <div class="repo-desc">
+            This project analyzes Blinkit's product dataset to understand sales performance, profit trends, and inventory behavior across different categories.
+            The analysis was first performed on the raw dataset using Data Studio, followed by data cleaning, transformation, and deeper analysis using Excel (Pivot Tables & Calculations).
+          </div>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Pivot Table</span>
+            <span class="tag">Data Studio</span>
+          </div>
+
+          <div class="repo-links">
+            <a href="https://github.com/Palla04/Blinkit_Data_Analysis" class="repo-btn">GitHub</a>
+            <a href="https://www.linkedin.com/pulse/blinkit-sales-inventory-analysis-dashboard-pallabi-biswas-sllsc/" class="repo-btn">Details</a>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- PROJECT 4 -->
+      <div class="repo-card">
+
+        <img src="https://lh3.googleusercontent.com/d/1AGes3ztZIsfS8BLNHoqFOq1K0ZjQBRnM" />
+
+        <div class="repo-body">
+
+          <div class="repo-title">
+            Movies Dataset Exploration Dashboard
+          </div>
+
+          <div class="repo-desc">
+            An interactive Movie Dataset Exploration Dashboard built using Microsoft Excel to explore movie industry trends, financial performance, and audience ratings through data-driven insights.
+          </div>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Pivot Table</span>
+          </div>
+
+          <div class="repo-links">
+            <a href="https://github.com/Palla04/Movies-Data-Exploration" class="repo-btn">GitHub</a>
+            <a href="https://www.linkedin.com/pulse/movies-dataset-exploration-dashboard-pallabi-biswas-ap7kc/?trackingId=FnqQOtFESI6WlZIHXS8OnA%3D%3D" class="repo-btn">Details</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 5 -->
+      <div class="repo-card">
+
+        <img src="https://lh3.googleusercontent.com/d/1B6cSLHnyS6gzm-tHa9KWd4yd-Ff8kVlr" />
+
+        <div class="repo-body">
+
+          <div class="repo-title">
+            State-wise Student Progression Analysis
+          </div>
+
+          <div class="repo-desc">
+            This project analyzes student progression from school to higher education across Indian states using UDISE and AISHE datasets.
+            The analysis focuses on dropout patterns, gender gaps, and state-level variations in enrolment.
+          </div>
+
+          <div class="tags">
+            <span class="tag">Power Bi</span>
+            <span class="tag">Github</span>
+          </div>
+
+          <div class="repo-links">
+            <a href="https://github.com/Palla04/Education_Data_Analysis" class="repo-btn">GitHub</a>
+            <a href="https://www.linkedin.com/pulse/state-wise-student-progression-analysis-pallabi-biswas-6xcac/?trackingId=X54L1mxnQHGMOBsrTzfOwg%3D%3D" class="repo-btn">Details</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  © 2026 Pallabi Biswas • Built with HTML & CSS
+</footer>
+
+</body>
+</html>
